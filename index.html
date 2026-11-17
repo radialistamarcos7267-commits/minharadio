@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Rádio - Cadastro de Ouvintes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1329 0%, #172038 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+
+        main {
+            width: 100%;
+            max-width: 500px;
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 4px; /* Caixas retas */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            border: 1px solid #33554c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .imagem-tema {
+            width: 100%;
+            max-width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 4px; /* Cantos retos na imagem */
+            border: 2px solid #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        form h2 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #f1f5f9;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 6px;
+        }
+
+        .campo-grupo {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .campo-grupo label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #cbd5e1;
+        }
+
+        .campo-grupo input {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 4px; /* Caixas retas nos inputs */
+            border: 1px solid #475569;
+            background-color: #0f172a;
+            color: #fff;
+            font-size: 0.95rem;
+        }
+
+        .campo-grupo input:focus {
+            outline: none;
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+        }
+
+        fieldset {
+            border: 1px solid #475569;
+            border-radius: 4px; /* Fieldset com cantos retos */
+            padding: 12px 15px;
+            margin-bottom: 18px;
+            background-color: rgba(15, 23, 42, 0.4);
+        }
+
+        legend {
+            font-weight: 600;
+            color: #38bdf8;
+            padding: 0 6px;
+            font-size: 0.9rem;
+        }
+
+        /* Organiza as opções empilhadas verticalmente para evitar aglutinação */
+        .opcao-selecao {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+        }
+
+        .opcao-selecao input {
+            margin-right: 8px;
+            accent-color: #38bdf8;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #0284c7;
+            color: #fff;
+            border: none;
+            border-radius: 4px; /* Botão com cantos retos */
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 5px;
+        }
+
+        button[type="submit"]:hover {
+            background: #0369a1;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #64748b;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>📻 Minha Rádio</h1>
+        <p>A música que conecta você ao mundo!</p>
+    </header>
+
+    <main>
+        <img src="mar.jpeg" alt="Microfone de estúdio de rádio" class="imagem-tema">
+
+        <form action="#" method="POST">
+            <h2>Cadastro de Ouvintes</h2>
+
+            <div class="campo-grupo">
+                <label for="nome">Nome / Rádio:</label>
+                <input type="text" id="nome" name="nome" required minlength="3" placeholder="marcao do trombone">
+            </div>
+
+            <div class="campo-grupo">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="radiotrombonefm@hotmail.com">
+            </div>
+
+            <div class="campo-grupo">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(41) 992550980">
+            </div>
+
+            <fieldset>
+                <legend>Qual seu estilo musical favorito?</legend>
+
+                <label class="opcao-selecao">
+                    <input type="radio" name="estilo" value="pop" required>
+                    <span>Pop</span>
+                </label>
+                <label class="opcao-selecao">
+                    <input type="radio" name="estilo" value="sertanejo">
+                    <span>Sertanejo</span>
+                </label>
+                <label class="opcao-selecao">
+                    <input type="radio" name="estilo" value="rock">
+                    <span>Rock</span>
+                </label>
+                <label class="opcao-selecao">
+                    <input type="radio" name="estilo" value="gospel">
+                    <span>Gospel</span>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>O que você gosta de ouvir na rádio?</legend>
+
+                <label class="opcao-selecao">
+                    <input type="checkbox" name="interesses" value="musicas">
+                    <span>Músicas</span>
+                </label>
+                <label class="opcao-selecao">
+                    <input type="checkbox" name="interesses" value="noticias">
+                    <span>Notícias</span>
+                </label>
+                <label class="opcao-selecao">
+                    <input type="checkbox" name="interesses" value="esportes">
+                    <span>Esportes</span>
+                </label>
+                <label class="opcao-selecao">
+                    <input type="checkbox" name="interesses" value="entrevistas">
+                    <span>Entrevistas</span>
+                </label>
+            </fieldset>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Minha Rádio - Todos os direitos reservados.</p>
+        <p>Sintonize sua alegria! Fmtrombone</p>
+    </footer>
+
+</body>
+</html>

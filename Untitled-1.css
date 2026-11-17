@@ -1,0 +1,33 @@
+/* 1. Cor de fundo da página inteira */
+body {
+  background-color: #0f2a1d;       /* Altere aqui o fundo da página */
+  color: #ffffff;                  /* Cor do texto principal */
+}
+
+/* 2. Cor do cartão (a caixa principal) */
+.cartao {
+  background-color: #8a1e3e;       /* Altere aqui o fundo do cartão */s
+  border: 2px solid #60a5fa;       /* Altere aqui a cor da borda do cartão */
+}
+
+/* 3. Cor da borda e fundo do campo de texto */
+input[type="text"] {
+  border: 1px solid #cbfd93;       /* Cor da borda do input */
+  background-color: #eff6ff;       /* Cor de fundo ao digitar */
+  color: #000000c7;                  /* Cor do texto que você digita */
+}
+
+/* 4. Cor do fundo do grupo de checkboxes (fieldset) */
+fieldset {
+  border: 2px solid #60a5fa;       /* Cor da borda do grupo */
+  background-color: #175424;       /* Cor de fundo do grupo */
+}
+
+/* 5. Cor do botão de envio */
+button[type="submit"] {
+  background-color: #25e5eb;       /* Cor normal do botão */
+}
+
+button[type="submit"]:hover {
+  background-color: #d81d1d;       /* Cor do botão quando passa o mouse por cima */
+}
